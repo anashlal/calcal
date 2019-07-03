@@ -8,6 +8,7 @@ public class calcalator {
 
 		boolean restart = true;
 
+		@SuppressWarnings("resource")
 		Scanner y = new Scanner(System.in);
 
 		System.out.println("Hello");
@@ -17,7 +18,7 @@ public class calcalator {
 
 		double firstnumberd;
 		double secondnumberd;
-		int cd;
+		
 		int n;
 		String r;
 		double result;
@@ -60,15 +61,14 @@ public class calcalator {
 				System.out.println("the end program");
 			}
 
-			Scanner x = new Scanner(System.in);
-			int v, z;
-			z = 999999;
-			v = 0;
+			@SuppressWarnings("resource")
+			Scanner x1 = new Scanner(System.in);
+			
 			System.out.println("Enter a 1 to continue ");
 			System.out.println("Enter a 2 to exit");
 			// System.out.println("Enter a another number to the end " );
 
-			n = x.nextInt();
+			n = x1.nextInt();
 
 			switch (n) {
 
@@ -79,7 +79,7 @@ public class calcalator {
 				break;
 
 			case 2:
-				if (2 > 1) {
+				
 					System.out.println("exit");
 					restart = false;
 					System.out.println("***************");
@@ -92,33 +92,7 @@ public class calcalator {
 					System.out.println("You are out of the program now !");
 					System.out.println("enter number to continue ");
 					break;
-					
-				} else if (v < z) {
-					System.out.println("The end");
-					break;
 				}
-
-				else {
-					System.out.println("enter number to continue");
-					break;
-				}
-			default:
-				System.out.println("input is incorrect");
-				System.out.println("enter number to continue.");
-			}
-			n = x.nextInt();
-			byte yes;
-			byte no;
-			int k = 1;
-			int l = 2;
-			yes = -1;
-			no = -2;
-			if (k >= yes) {
-				restart = true;
-			} else if (l <= no) {
-				restart = false;
-				break;
-			}
 		}
 
 		while (restart);
@@ -137,5 +111,7 @@ public class calcalator {
 	public static double minus(double firstnumber, double secondnumber) {
 		return firstnumber - secondnumber;
 	}
+	
+	
 }
 
